@@ -1,0 +1,20 @@
+#usda 1.0
+
+def Xform "model" (
+    kind = "component"
+    payload = @payload.usda@
+)
+{
+    float3[] extentsHint = [(-1.5, -2, -3), (2, 3, 5)]
+}
+
+
+def Xform "model2" (
+    kind = "component"
+    payload = @payload.usda@
+)
+{
+    double3 xformOp:translate = (1, -5, 10)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+    float3[] extentsHint = [(-2.5, -5, -3), (1, 2, 0)]
+}
